@@ -5,15 +5,7 @@
 //
 
 #include "crc32.h"
-
-// big endian architectures need #define __BYTE_ORDER __BIG_ENDIAN
-#ifndef _MSC_VER
-# ifdef BSD
-#  include <sys/endian.h>
-# else
-#  include <endian.h>
-# endif
-#endif
+#include "hashendian.h"
 
 
 /// same as reset()
